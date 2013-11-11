@@ -287,6 +287,8 @@
 		CE15451B1830A76A00BE0D17 /* monster in Resources */ = {isa = PBXBuildFile; fileRef = CE1545141830A76A00BE0D17 /* monster */; };
 		CE15451C1830A76A00BE0D17 /* music in Resources */ = {isa = PBXBuildFile; fileRef = CE1545151830A76A00BE0D17 /* music */; };
 		CE15451D1830A76A00BE0D17 /* specia in Resources */ = {isa = PBXBuildFile; fileRef = CE1545161830A76A00BE0D17 /* specia */; };
+		CE1545201830A85C00BE0D17 /* Cover.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE15451E1830A85C00BE0D17 /* Cover.cpp */; };
+		CE1545231830AC3500BE0D17 /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1545211830AC3500BE0D17 /* GameScene.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -887,6 +889,10 @@
 		CE1545141830A76A00BE0D17 /* monster */ = {isa = PBXFileReference; lastKnownFileType = folder; name = monster; path = Resources/monster; sourceTree = "<group>"; };
 		CE1545151830A76A00BE0D17 /* music */ = {isa = PBXFileReference; lastKnownFileType = folder; name = music; path = Resources/music; sourceTree = "<group>"; };
 		CE1545161830A76A00BE0D17 /* specia */ = {isa = PBXFileReference; lastKnownFileType = folder; name = specia; path = Resources/specia; sourceTree = "<group>"; };
+		CE15451E1830A85C00BE0D17 /* Cover.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Cover.cpp; path = Classes/Cover.cpp; sourceTree = "<group>"; };
+		CE15451F1830A85C00BE0D17 /* Cover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Cover.h; path = Classes/Cover.h; sourceTree = "<group>"; };
+		CE1545211830AC3500BE0D17 /* GameScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameScene.cpp; path = Classes/GameScene.cpp; sourceTree = "<group>"; };
+		CE1545221830AC3500BE0D17 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameScene.h; path = Classes/GameScene.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2114,6 +2120,10 @@
 		CE1544A71830A5DD00BE0D17 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				CE15451E1830A85C00BE0D17 /* Cover.cpp */,
+				CE1545211830AC3500BE0D17 /* GameScene.cpp */,
+				CE1545221830AC3500BE0D17 /* GameScene.h */,
+				CE15451F1830A85C00BE0D17 /* Cover.h */,
 				CE1544A81830A5DD00BE0D17 /* AppDelegate.h */,
 				CE1544A91830A5DD00BE0D17 /* AppDelegate.cpp */,
 				CE1544AB1830A5DD00BE0D17 /* HelloWorldScene.h */,
@@ -2282,6 +2292,7 @@
 				CE15417D1830A5D900BE0D17 /* CCArray.cpp in Sources */,
 				CE1543001830A5DB00BE0D17 /* CCTextureAtlas.cpp in Sources */,
 				CE1541FA1830A5D900BE0D17 /* CCLayer.cpp in Sources */,
+				CE1545231830AC3500BE0D17 /* GameScene.cpp in Sources */,
 				CE15446E1830A5DD00BE0D17 /* cpGrooveJoint.c in Sources */,
 				CE1544041830A5DD00BE0D17 /* AnimationState.cpp in Sources */,
 				CE1541541830A5D800BE0D17 /* CCActionManager.cpp in Sources */,
@@ -2349,6 +2360,7 @@
 				CE1543911830A5DC00BE0D17 /* CCSpriteLoader.cpp in Sources */,
 				CE1541D01830A5D900BE0D17 /* mat4stack.c in Sources */,
 				CE1543741830A5DC00BE0D17 /* CCLayerLoader.cpp in Sources */,
+				CE1545201830A85C00BE0D17 /* Cover.cpp in Sources */,
 				CE1544941830A5DD00BE0D17 /* cpSpaceQuery.c in Sources */,
 				CE1543C11830A5DC00BE0D17 /* CCControlUtils.cpp in Sources */,
 				CE1542C21830A5DB00BE0D17 /* CCProfiling.cpp in Sources */,
