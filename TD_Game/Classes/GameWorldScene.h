@@ -43,10 +43,11 @@ public:
     
     CC_SYNTHESIZE_RETAIN(CCArray*, _enemies, Enemies );
     
+    CC_SYNTHESIZE_RETAIN(CCArray*, waypointsArray, WaypointArray );
+    
 private:
     CCArray* towerBases;
     CCArray* towers;
-    CCArray* waypointsArray;
 };
 
 #endif /* defined(__TD_Game__GameWorldScene__) */

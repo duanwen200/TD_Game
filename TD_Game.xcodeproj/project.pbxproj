@@ -284,6 +284,7 @@
 		CE1545281831F50F00BE0D17 /* GameWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1545261831F50F00BE0D17 /* GameWorldScene.cpp */; };
 		CE15452B1831F9C700BE0D17 /* Tower.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1545291831F9C700BE0D17 /* Tower.cpp */; };
 		CE154531183207F600BE0D17 /* Waypoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE15452F183207F600BE0D17 /* Waypoint.cpp */; };
+		CE15453418322B9B00BE0D17 /* Enemey.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE15453218322B9A00BE0D17 /* Enemey.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -884,6 +885,8 @@
 		CE15452A1831F9C700BE0D17 /* Tower.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tower.h; path = Classes/Tower.h; sourceTree = "<group>"; };
 		CE15452F183207F600BE0D17 /* Waypoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Waypoint.cpp; path = Classes/Waypoint.cpp; sourceTree = "<group>"; };
 		CE154530183207F600BE0D17 /* Waypoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Waypoint.h; path = Classes/Waypoint.h; sourceTree = "<group>"; };
+		CE15453218322B9A00BE0D17 /* Enemey.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Enemey.cpp; path = Classes/Enemey.cpp; sourceTree = "<group>"; };
+		CE15453318322B9B00BE0D17 /* Enemey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Enemey.h; path = Classes/Enemey.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2106,6 +2109,8 @@
 			isa = PBXGroup;
 			children = (
 				CE15452F183207F600BE0D17 /* Waypoint.cpp */,
+				CE15453218322B9A00BE0D17 /* Enemey.cpp */,
+				CE15453318322B9B00BE0D17 /* Enemey.h */,
 				CE154530183207F600BE0D17 /* Waypoint.h */,
 				CE1545291831F9C700BE0D17 /* Tower.cpp */,
 				CE15452A1831F9C700BE0D17 /* Tower.h */,
@@ -2291,6 +2296,7 @@
 				CE1542E81830A5DB00BE0D17 /* CCUserDefault.mm in Sources */,
 				CE15449C1830A5DD00BE0D17 /* cpVect.c in Sources */,
 				CE1543621830A5DC00BE0D17 /* CCControlLoader.cpp in Sources */,
+				CE15453418322B9B00BE0D17 /* Enemey.cpp in Sources */,
 				CE1541961830A5D900BE0D17 /* CCSet.cpp in Sources */,
 				CE15440D1830A5DD00BE0D17 /* AtlasAttachmentLoader.cpp in Sources */,
 				CE1542851830A5DA00BE0D17 /* CCScriptSupport.cpp in Sources */,
