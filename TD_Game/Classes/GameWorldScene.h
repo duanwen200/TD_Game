@@ -31,7 +31,11 @@ public:
     
     void loadWayPoinst();
     
+    bool loadWave();
+    
     CREATE_FUNC(GameWorldScene);
+    
+    void enmeyKilled();
     
     static CCScene* scene();
     
@@ -41,11 +45,13 @@ public:
     
     bool collisionWithCircle( CCPoint ciclePoint1, float radius1 , CCPoint ciclePoint2, float radius2 );
     
-    CC_SYNTHESIZE_RETAIN(CCArray*, _enemies, Enemies );
-    
     CC_SYNTHESIZE_RETAIN(CCArray*, waypointsArray, WaypointArray );
     
+    CCArray* _enemies;
+    
 private:
+    
+    int wave;
     CCArray* towerBases;
     CCArray* towers;
 };

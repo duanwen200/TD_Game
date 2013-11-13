@@ -8,6 +8,7 @@
 
 #include "GameWorldScene.h"
 #include "Tower.h"
+#include "Enemey.h"
 
 GameWorldScene::GameWorldScene(){
     
@@ -19,6 +20,10 @@ GameWorldScene::GameWorldScene(){
     
     waypointsArray =  CCArray::create();
     CC_SAFE_RETAIN( waypointsArray );
+    
+    _enemies =  CCArray::create();
+    CC_SAFE_RETAIN( _enemies );
+    
     
 }
 
@@ -37,13 +42,18 @@ bool GameWorldScene::init(){
         return false;
     }
     
+    wave = 0;
+    
     loadGameWorld();
     
     loadTowerPosition();
     
     loadWayPoinst();
+    
+    loadWave();
 
     setTouchEnabled( true );
+    
     return true;
 }
 
@@ -100,6 +110,34 @@ void GameWorldScene::loadGameWorld(){
     
 }
 
+bool GameWorldScene::loadWave(){
+    
+    CCArray* waveData = CCArray::createWithContentsOfFile( "res/Waves.plist");
+    
+    if ( wave >= waveData->count() ) {
+        return false;
+    }
+    
+    CCArray* currentWaveData = (CCArray*)waveData->objectAtIndex( wave );
+    CCObject* obj = NULL;
+    
+    CCARRAY_FOREACH(currentWaveData, obj ){
+        
+        CCDictionary* dic = (CCDictionary*)obj;
+        
+        Enemey* e = Enemey::createWithGame( this );
+        
+        _enemies->addObject( e );
+        
+        CCString* str  = (CCString*)dic->valueForKey( "spawnTime");
+        e->scheduleOnce( schedule_selector( Enemey::setActive), str->intValue() );
+        
+    }
+    
+    wave++;
+    
+    return true;
+}
 void GameWorldScene::loadWayPoinst(){
     
    
@@ -168,8 +206,25 @@ bool GameWorldScene::collisionWithCircle(cocos2d::CCPoint ciclePoint1, float rad
     float distance = ccpDistance( ciclePoint1, ciclePoint2 );
     
     if ( distance <= radius1 + radius2 ) {
+        
         return true;
     }
     
     return false;
+}
+
+
+void GameWorldScene::enmeyKilled(){
+    
+    if ( _enemies->count() <= 0 ) {
+        if ( !this->loadWave() ) {
+            
+            CCLOG( "You Win");
+            
+            CCMessageBox("You Win", "提示");
+        }
+    }
+    
+    
+    
 }
