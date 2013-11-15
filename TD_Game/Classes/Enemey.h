@@ -15,10 +15,15 @@ USING_NS_CC;
 
 
 class GameWorldScene;
+class Tower;
 class Enemey : public CCNode {
     
     
 public:
+    
+    Enemey();
+    
+    ~Enemey();
     
     static Enemey* createWithGame( GameWorldScene* f );
     
@@ -29,10 +34,20 @@ public:
     void update(float dt );
     
     void draw();
+
+    void getRemoved();
+    
+    void damage( int damage );
+    
+    void setActive( float dt );
+    
     
     CC_SYNTHESIZE(CCSprite*, _mysprite, Mysprit );
+    
 private:
     CCPoint myPosition;
+    
+    CCArray* attackArray;
     
     float walkingSpeed;
     
@@ -41,6 +56,8 @@ private:
     int currentHp;
     
     bool active;
+    
+    
     
     Waypoint* destinaWayPoint;
 };

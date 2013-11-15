@@ -15,10 +15,15 @@ USING_NS_CC;
 #define kTower_COST  300
 
 class GameWorldScene;
+class Enemey;
+
 class Tower : public CCNode {
     
     
 public:
+    
+    Tower();
+    ~Tower();
     
     virtual bool initWithGame( GameWorldScene* father ,CCPoint& location );
     
@@ -29,14 +34,30 @@ public:
     void draw();
     
     CC_SYNTHESIZE(GameWorldScene*, world, GameWorldScene );
+    
+    
+    void shootEnemy( float  dt );
+    
+    void chooseEnemy( Enemey* e );
+
+    void lostSightofEnemey();
+    
     CC_SYNTHESIZE(CCSprite*, _mySprite, MySprite);
+    
+    void killBullet( CCNode* n );
+
+    
+    void damage_enemey();
     
 private:
     
     int attactRange;
+    
     int damage;
+    
     float fireRate;
     
+    Enemey* _chooseEnemy;
     
 };
 
